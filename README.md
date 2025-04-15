@@ -9,6 +9,24 @@ Aspiring IT and cybersecurity professional with a background in project manageme
 
 Motivated and detail-oriented professional with a background in project management and a growing focus in IT and cybersecurity. Seeking an entry-level opportunity where I can apply my project coordination experience, passion for technology, and developing knowledge in GRC to support secure, efficient, and compliant business operations. Eager to contribute to a dynamic team while continuing to expand my technical and cybersecurity expertise.
 
+
+## Skills
+
+- Policy Development and Management
+- Regulatory Compliance
+- Stakeholder Management and Collaboration
+- Security Frameworks and Controls
+- SIEM Tools
+- Jira, Zendesk, and Microsoft Products
+- Risk Management
+- SQL, Python, and Linux
+- Problem-Solving and Critical Thinking
+- Incident Response Planning
+- Threats, Risk, and Vulnerabilities
+- Project Management
+
+
+
 ## Projects
 **Project #1**: 
 # 🛡️ Lightweight SIEM with ELK Stack & Filebeat
@@ -98,7 +116,7 @@ elk-siem-portfolio/
 
 ```bash
 
-git clone https://github.com/johnkennedy1025/elk-siem-portfolio.git
+git clone [REPO_URL]
 
 cd elk-siem-portfolio
 
@@ -196,7 +214,7 @@ A lightweight, easy-to-understand honeypot written in Python that simulates a fa
 --
 1. Clone the Repository
 bash
-git clone https://github.com/johnkennedy1025/simple-python-honeypot.git
+git clone [REPO_URL]
 cd simple-python-honeypot
 2. Run the Honeypot
 Make sure you're using Python 3.x.
@@ -259,20 +277,395 @@ No external dependencies!
 📄 **License**
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+---
+
+ **Project #3**:
+ 
+🧬**Malware Analysis Lab**
+---
+A hands-on malware analysis project exploring the behavior, indicators, and technical breakdown of malicious software in a controlled lab environment. This project highlights reverse engineering, dynamic/static analysis, and reporting skills used in real-world threat investigations.
+
+---
+
+📌 **Project Overview**
+
+This project focuses on analyzing malware samples using both static and dynamic techniques. The goal is to extract Indicators of Compromise (IOCs), understand malware functionality, and document behavior.
+
+---
+
+🔍 **Skills Demonstrated**
+
+Static and dynamic malware analysis
+
+String and function analysis
+
+Network and file behavior tracking
+
+Reporting and IOC documentation
+
+---
+
+
+🧪 **Tools & Environment**
+
+Tool	Purpose
+PEStudio	Static analysis (PE headers, strings, imports)
+x64dbg / Ghidra	Disassembly, debugging, reverse engineering
+Any.Run / Cuckoo Sandbox	Dynamic behavior analysis
+Wireshark	Network traffic inspection
+Procmon	File/Registry/Process monitoring
+VirusTotal	Multi-engine detection
+⚠️ Note: All analysis was conducted in a safe, isolated virtual lab to prevent accidental infection or system damage.
+
+---
+
+🛠️ **Setup Instructions**
+
+⚠️ Warning: Never run malware samples on your host machine. Always use a secure and isolated VM.
+
+Create a virtual machine using VirtualBox or VMware
+
+Install the tools listed above
+
+(Optional) Disable external network access or simulate LAN with controlled DNS/sniffer
+
+Place malware samples inside the VM
+
+Begin analysis and record all findings in reports
+
+---
+
+
+🧬 **Sample Analysis**: MalwareName.exe
+
+---
+
+🔎 **Static Analysis**
+---
+MD5 Hash: d41d8cd98f00b204e9800998ecf8427e
+
+File Type: PE32 executable
+
+Packed: Yes (UPX packed)
+
+Suspicious Strings:
+
+CreateRemoteThread
+
+WinExec
+
+cmd.exe /c powershell
+
+🧪 **Dynamic Analysis**
+---
+Creates Files:
+C:\Users\Victim\AppData\Roaming\evil.exe
+
+Network Behavior:
+
+Connects to: http://maliciousdomain[.]com/api
+
+Downloads secondary payload
+
+Persistence Mechanism:
+Registry Run Key
+
+🚨** IOCs Extracted**
+---
+Type	Value
+File Path	C:\Users\Victim\AppData\evil.exe
+Domain	maliciousdomain[.]com
+IP Address	185.123.45.67
+Registry	HKCU\Software\Microsoft\Windows\CurrentVersion\Run\evil
+
+---
+📖 **Report Format** (Included)
+Each malware report includes:
+
+📦 Basic file information
+
+🔍 Static analysis findings
+
+🧪 Dynamic behavior results
+
+🚨 Extracted IOCs
+
+📌 MITRE ATT&CK mapping (if applicable)
+
+📄 Optional PDF export for visual reports
+
+🔐 **Ethics & Legal**
+This repository is strictly for educational and research purposes. All malware samples were analyzed in a controlled, isolated environment. Do not distribute or misuse any malicious files.
+
+---
+
+📂 **Directory Structure**
+---
+bash
+malware-analysis-lab/
+├── reports/
+│   ├── agentstealer_report.md
+│   ├── dropper_report.md
+│   └── invoice_macro_report.md
+├── samples-overview.md
+├── report-template.md
+├── tools/
+│   └── setup_notes.md
+└── README.md
+
+---
+
+# 🧬 Malware Analysis Report – [Sample Name / Hash]
+
+## 📦 Basic Information
+- **File Name**:  
+- **MD5**:  
+- **SHA-256**:  
+- **File Size**:  
+- **Type**: (e.g., PE32, ELF, Script)
+- **Packed**: (Yes/No - with packer name if detected)
+
+---
+
+## 🔎 Static Analysis
+
+### 🧵 Strings of Interest
+- Example: `CreateRemoteThread`
+- Example: `cmd.exe /c powershell`
+- Example: `http://maliciousdomain.com/payload`
+
+### 📚 Imports / APIs
+- `WinExec`
+- `GetProcAddress`
+- `InternetOpen`
+
+### 🗂️ Sections Overview
+| Section | Entropy | Suspicious? |
+|--------|---------|-------------|
+| .text  | 6.7     | No          |
+| .rsrc  | 7.8     | **Yes**     |
+
+---
+
+## 🧪 Dynamic Analysis
+
+### 📁 File Behavior
+- Drops file to: `C:\Users\Victim\AppData\Roaming\evil.exe`
+- Creates: `*.tmp`, `*.bat` scripts
+
+### 🌐 Network Activity
+- Domain Contacted: `maliciousdomain[.]com`
+- IP Address: `185.123.45.67`
+- Protocols: HTTP, DNS
+
+### 🔄 Persistence Mechanism
+- Adds run key:
+  - `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\EvilApp`
+
+### 📊 Behavior Summary
+- Exhibits RAT behavior (remote shell)
+- Exfiltrates clipboard data
+- Spawns `powershell.exe`
+
+---
+
+## ⚔️ MITRE ATT&CK Mapping
+
+| Technique ID | Name                        | Description                     |
+|--------------|-----------------------------|---------------------------------|
+| T1059.001    | PowerShell                  | Executes commands via PS        |
+| T1547.001    | Registry Run Keys / Startup | Establishes persistence         |
+| T1041        | Exfiltration Over C2 Channel| Sends data over HTTP            |
+
+---
+
+## 🚨 Indicators of Compromise (IOCs)
+
+| Type       | Value                                       |
+|------------|---------------------------------------------|
+| File Path  | `C:\Users\Victim\AppData\evil.exe`          |
+| IP Address | `185.123.45.67`                             |
+| Domain     | `maliciousdomain[.]com`                     |
+| Registry   | `HKCU\...\Run\EvilApp`                      |
+
+---
+
+## 🧼 Recommendations
+- Block listed IOCs at firewall/proxy level
+- Use EDR to detect persistence keys
+- Re-image infected systems
+- Report C2 domains to abuse contacts
+
+---
+
+## 📁 Sample Source
+- [ ] MalwareBazaar
+- [ ] VirusShare
+- [ ] Malpedia
+- [ ] Other: _____________________
+
+---
+
+## 📄 Notes
+- Analysis performed in isolated Windows 10 VM (no network)
+- Tools used: Ghidra, Procmon, PEStudio, x64dbg
+
+---
+
+> **Disclaimer**: This report is for educational use only. Do not deploy malicious files in uncontrolled environments.
+
+---
+
+# 🧾 Malware Samples Overview
+
+| Sample Name     | MD5                              | Behavior Summary                | Persistence | Network IOCs          | MITRE IDs       |
+|------------------|-----------------------------------|----------------------------------|-------------|------------------------|------------------|
+| AgentStealer.exe | `a1b2c3d4e5f6g7...`              | Keylogging, clipboard theft     | Yes         | `185.10.20.30`         | T1056, T1041     |
+| dropper.exe      | `abcd1234ef5678...`              | Drops RAT, C2 beaconing         | No          | `malicious[.]site`     | T1105, T1059.003 |
+| invoice.docm     | `e4f5g6h7i8j9k0...`              | Macro execution, powershell     | Yes         | None                   | T1059.001, T1566 |
+| trojan.dll       | `1234abcd5678ef...`              | Injects into explorer.exe       | Yes         | `evil[.]cloud`         | T1055, T1547     |
+
+> For detailed analysis of each sample, refer to `/reports/sample_name_report.md`.
 
 
 
 
-## Certifications
-[Provide certifications that you have obtained. Use ChatGPT to help create the link - Remove this afterwards]]
-<div>
-<img src="https://img.shields.io/badge/-Security%2B-FF0000?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-Network%2B-007ACC?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-A%2B-4D4D4D?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-CDSA-006400?&style=for-the-badge&logoColor=white" />
-<img src="https://img.shields.io/badge/-CCD-000080?&style=for-the-badge&logoColor=white" />
-</div>
+📄 License
+This project is licensed under the MIT License. All malware samples used are publicly available and sourced from platforms like VirusShare, MalwareBazaar, and Malpedia for educational use.
+
+---
+
+
+# 📋 Project #4: GRC Audit Simulation
+
+A Governance, Risk, and Compliance (GRC) project that simulates an internal IT audit of a fictional company. The project demonstrates understanding of security frameworks, control assessments, risk evaluation, and compliance documentation.
+
+---
+
+## 📌 Project Overview
+
+This simulated GRC audit project walks through the process of evaluating a fictional company's information systems against a known security framework (e.g., **NIST 800-53**, **ISO 27001**, or **CIS Controls**). The focus is on identifying risks, assessing the effectiveness of existing controls, and creating documentation that aligns with industry compliance standards.
+
+---
+
+## 🎯 Objectives
+
+- Simulate a basic internal IT security audit  
+- Map controls to a known cybersecurity framework  
+- Identify control gaps and risk impact  
+- Recommend mitigations and document findings in audit reports  
+
+---
+
+## 🛠️ Tools & Artifacts
+
+| Tool / Template        | Purpose                                           |
+|------------------------|---------------------------------------------------|
+| **Risk Register**      | Track risks, likelihood, impact, and response     |
+| **Control Matrix**     | Map implemented controls to compliance framework  |
+| **Audit Report Template** | Document findings and recommendations           |
+| **Checklist (Excel/PDF)** | Checklist to guide audit steps and evidence     |
+
+---
+
+## 🧪 Simulated Environment
+
+**Company:** ACME Corp  
+**Industry:** SaaS / Cloud-based Software Provider  
+**Employees:** ~200  
+**Audit Scope:**  
+- Identity & Access Management (IAM)  
+- Data Protection  
+- Change Management  
+- Logging & Monitoring  
+- Endpoint Security  
+
+---
+
+## 🔍 Framework Mapping Example
+
+**Mapped Framework:** NIST SP 800-53 (Moderate Baseline)
+
+| Control ID | Control Name               | In Place? | Evidence Reviewed           | Gap Identified |
+|------------|----------------------------|-----------|-----------------------------|----------------|
+| AC-2       | Account Management         | ✅ Yes     | AD User Lifecycle Policy     | ❌ No MFA Policy |
+| SI-4       | System Monitoring          | ✅ Partial | Syslog Configs, No SIEM      | ✅ Needs Improvement |
+| CM-2       | Baseline Configuration     | ❌ No      | None available               | ✅ No standard image |
+
+---
+
+## 📄 Deliverables
+
+- ✅ **Audit Checklist**  
+- ✅ **Control Mapping Matrix**  
+- ✅ **Risk Register**  
+- ✅ **Audit Report**  
+- ✅ **Remediation Plan (optional)**  
+
+---
+
+## 📖 Sample Report Structure
+
+1. **Executive Summary**  
+2. **Scope & Methodology**  
+3. **Findings Summary Table**  
+4. **Detailed Findings**  
+5. **Framework Mapping**  
+6. **Risk Ratings (High / Med / Low)**  
+7. **Recommendations**  
+8. **Appendices (Policies, Logs, Screenshots)**  
+
+---
+
+## 🧠 Skills Demonstrated
+
+- Risk identification and impact analysis  
+- Framework mapping (NIST/CIS/ISO)  
+- Documentation and reporting  
+- Audit methodology and evidence review  
+- Communication of technical issues to non-technical audiences  
+
+---
+
+## 🔐 Ethics & Confidentiality
+
+This project is a **fictional simulation** and does not include any real company data. It is intended solely for educational and portfolio purposes.
+
+---
+
+📂 **Directory Structure**
+
+grc-audit-simulation/
+
+├── reports/                     
+│   ├── audit_summary_report.md   
+│   ├── risk_register.xlsx        
+│   ├── control_matrix.xlsx       
+│
+├── templates/                  
+│   ├── audit_checklist_template.pdf  
+│   ├── report_template.md           
+│
+├── evidence/                   
+│   └── example_screenshots/
+│
+└── README.md                   
+
+---
+
+Certification | Issuer | Status | Badge
+Google Cybersecurity Certificate | Google / Coursera | ✅ Completed | [![Google Cybersecurity]([https://your-image-url.com/google-cert.png](https://www.coursera.org/account/accomplishments/specialization/certificate/VJSEX0XZOZVE))](https://coursera.org/verify/your-cert-link)
+
+Cybersecurity, Risk, and Compliance (GRC) Mastery | [Your Provider] | ✅ Completed | 
+CompTIA Security+ | CompTIA | ⏳ In Progress | 
 
 ## Projects
-- Detection Lab
-- SOC Automation Project
+- Lighweight SIEM
+- Python Honeypot
+- Malware Analysis Lab
+- GRC Audit
+- SOC Analyst Simulation(TryHackMe)
+
+## Trainings 
+ - Mastercard Cybersecurity Virtual Experience Program
+ -  AIG Shields Up: Cybersecurity Virtual Experience Program
