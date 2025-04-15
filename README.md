@@ -28,7 +28,8 @@ Motivated and detail-oriented professional with a background in project manageme
 
 
 ## Projects
-**Project #1**: 
+# 📋 Project #1: 
+
 # 🛡️ Lightweight SIEM with ELK Stack & Filebeat
 
 This project is a lightweight Security Information and Event Management (SIEM) system using the ELK Stack (Elasticsearch, Logstash, Kibana) and Filebeat for log collection. It demonstrates centralized log ingestion, parsing, visualization, and analysis 
@@ -189,7 +190,7 @@ MIT License
 ---
 
 
-**Project #2**: 
+# 📋 Project #2: 
 
 🛡️**Python Honeypot**
 --
@@ -279,8 +280,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
- **Project #3**:
- 
+# 📋 Project #3:
+
 🧬**Malware Analysis Lab**
 ---
 A hands-on malware analysis project exploring the behavior, indicators, and technical breakdown of malicious software in a controlled lab environment. This project highlights reverse engineering, dynamic/static analysis, and reporting skills used in real-world threat investigations.
@@ -536,8 +537,10 @@ This project is licensed under the MIT License. All malware samples used are pub
 ---
 
 
-# 📋 Project #4: GRC Audit Simulation
+# 📋 Project #4: 
 
+**GRC Audit Simulation**
+---
 A Governance, Risk, and Compliance (GRC) project that simulates an internal IT audit of a fictional company. The project demonstrates understanding of security frameworks, control assessments, risk evaluation, and compliance documentation.
 
 ---
