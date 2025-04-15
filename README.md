@@ -653,11 +653,15 @@ grc-audit-simulation/
 
 ---
 
-Certification | Issuer | Status | Badge
-Google Cybersecurity Certificate | Google / Coursera | ✅ Completed | [![Google Cybersecurity]([https://your-image-url.com/google-cert.png](https://www.coursera.org/account/accomplishments/specialization/certificate/VJSEX0XZOZVE))](https://coursera.org/verify/your-cert-link)
+## 🛡️ Certifications
 
-Cybersecurity, Risk, and Compliance (GRC) Mastery | [Your Provider] | ✅ Completed | 
-CompTIA Security+ | CompTIA | ⏳ In Progress | 
+| Certification | Issuer           | Status        | Badge |
+|---------------|------------------|---------------|-------|
+| [**Google Cybersecurity Certificate**](https://www.credly.com/badges/bbb95843-3257-4243-ab7f-5ed6f20e821c/public_url) | Google / Coursera | ✅ Completed | [![Google Cybersecurity](https://images.credly.com/size/110x110/images/0d604ca9-2c11-490b-9eb3-4c7fa7b70363/image.png)](https://www.credly.com/badges/bbb95843-3257-4243-ab7f-5ed6f20e821c/public_url) |
+| [**Cybersecurity, Risk, and Compliance (GRC) Mastery Certificate**](https://www.credly.com/badges/9d616b24-3a84-4ba2-b509-8a9595d395f2/public_url) | GRC Mastery | ✅ Completed | [![GRC Mastery](https://images.credly.com/size/110x110/images/4ab29340-7c1b-4ee2-b466-818b1c54cbd3/image.png)](https://www.credly.com/badges/9d616b24-3a84-4ba2-b509-8a9595d395f2/public_url) |
+| **CompTIA Security+** | CompTIA | ⏳ In Progress | ![Security+](https://via.placeholder.com/80x80.png?text=Security%2B) |
+
+
 
 ## Projects
 - Lighweight SIEM
