@@ -630,27 +630,7 @@ This simulated GRC audit project walks through the process of evaluating a ficti
 ## 🔐 Ethics & Confidentiality
 
 This project is a **fictional simulation** and does not include any real company data. It is intended solely for educational and portfolio purposes.
-
----
-
-📂 **Directory Structure**
-
-grc-audit-simulation/
-
-├── reports/                     
-│   ├── audit_summary_report.md   
-│   ├── risk_register.xlsx        
-│   ├── control_matrix.xlsx       
-│
-├── templates/                  
-│   ├── audit_checklist_template.pdf  
-│   ├── report_template.md           
-│
-├── evidence/                   
-│   └── example_screenshots/
-│
-└── README.md                   
-
+                
 ---
 
 ## 🛡️ Certifications
